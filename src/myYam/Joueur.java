@@ -96,7 +96,7 @@ public class Joueur {
 		if ( (count[0]*count[1]*count[2]*count[3]*count[4] != 0)||(count[1]*count[2]*count[3]*count[4]*count[5] != 0) )
 			isGrandeSuite = true;
 		//打印选择格子信息
-		
+		System.out.println("Voici les probablités que vous pouvez choisir: ");
 		if (!feuilleDeScore.getIsFinish(0)) {
 			System.out.println(feuilleDeScore.getCombinaison(0));
 			haveCase = true;
@@ -198,16 +198,6 @@ public class Joueur {
 	public String toString() {
 		return "Le total score du joueur " + id + " est " + feuilleDeScore.getTotalScore();
 	}
-	
-	public static void main(String[] args) {
-		Joueur j1 = new Joueur(1);
-		int i = 13;
-		while(i-- > 0) {
-		}
-		j1.jouer();
-		System.out.println(j1.toString());
-	}
-	
 }
 
 
